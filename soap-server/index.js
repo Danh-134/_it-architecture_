@@ -1,6 +1,6 @@
 const myService = {
     SoapWebService:{
-        SoapWebService_0: {
+        HelloSoapWebService_0: {
             HelloWorld: function (args) {
                 return {
                     name: args.name
