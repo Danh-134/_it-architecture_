@@ -23,11 +23,9 @@ npm prestart
 ```
 
 Les dépendances sont donc installées. 
-<<<<<<< HEAD
+
 Le service de base se situe dans le dossier **/controllers** et le fichier ***HelloworldControllerService.js***
-=======
-Le service de base se situe dans le dossier controller et le fichier ***HelloworldControllerService.js***
->>>>>>> 7d74035b448d82f9d1b6e1ce9babca25dd9a53cd
+
 
 Après tester votre service ! 
 
