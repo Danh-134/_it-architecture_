@@ -11,3 +11,23 @@ npm start
 ```
 
 This project leverages the mega-awesome [oas-tools](https://github.com/isa-group/oas-tools) middleware which does most all the work.
+
+
+### Running on minikube
+In your cmd : ``` @FOR /f "tokens=* delims=^L" %i IN ('minikube docker-env') DO %i ```
+ Generate docker image : ```docker build -t rest-api-server:v1 . ```
+Execute image :
+```shell
+  kubectl create deployment rest-api-server-instance --image=soap-server:v1
+  kubectl expose deployment rest-api-server-instance --port=8000 --type=NodePort
+    kubectl get services
+    minikube service rest-api-server-instance --url
+``` 
+
+### Stop
+```shell
+    kubectl delete services rest-api-server-instance
+    kubectl delete deployment rest-api-server-instance
+    minikube stop
+    minikube delete
+``` 

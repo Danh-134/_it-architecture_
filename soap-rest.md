@@ -123,3 +123,15 @@ Objectif : Créer une api REST avec un endpoint `hello-world`
     { "name": "sample name" }
     ```
 - ✨ `git commit / push`
+
+### Running on minikube
+In your cmd : ```@FOR /f "tokens=* delims=^L" %i IN ('minikube docker-env') DO %i 
+                  docker build -t soap-server:v1 . --force-rm 
+                  ```
+Execute image :
+```shell
+  kubectl create deployment soap-server-instance --image=soap-server:v1
+  kubectl expose deployment soap-server-instance --port=8000 --type=NodePort
+  kubectl get services
+  minikube service soap-server-instance  --url
+```
