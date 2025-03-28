@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Danh-134/_it-architecture_#readme",
   "dependencies": {
-    "soap": "^0.31.0"
+    "soap": "^1.1.10"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
